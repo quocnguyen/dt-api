@@ -1,0 +1,53 @@
+<!DOCTYPE html lang="en">
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/css/pure-min.css">
+  <!--[if lte IE 8]>
+    <link rel="stylesheet" href="/css/grids-responsive-old-ie-min.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+    <link rel="stylesheet" href="/css/grids-responsive-min.css">
+  <!--<![endif]-->
+  <link rel="stylesheet" type="text/css" href="/css/style.css">
+  <title>Get link drive không bao giờ die</title>
+</head>
+<body>
+  <div class="wrapper">
+    <div class="container">
+      <section class="pure-g">
+        <div class="pure-u-sm-1-5"></div>
+        <div class="pure-u-sm-3-5">
+          <h3>
+            create new worker
+            <a href="/workers">back to list</a>
+          </h3>
+          {{#success}}
+            <p>Done.</p>
+          {{/success}}
+          <form class="pure-form" method="post">
+            <fieldset>
+              {{#csrfToken}}
+              <input class="pure-input-1" type="hidden" name="_csrf" value="{{csrfToken}}">
+              {{/csrfToken}}
+
+              <label>Worker Name</label>
+              <input class="pure-input-1" type="text" name="name" required>
+
+              <label>Worker URL</label>
+              <input class="pure-input-1" type="url" name="url" required>
+
+              <label>Worker Secret</label>
+              <input class="pure-input-1" type="text" name="secret" required>
+
+              <button class="pure-button pure-input-1 pure-button-primary" type="submit">
+                Tạo Worker
+              </button>
+            </fieldset>
+          </form>
+        </div>
+      </section>
+    </div>
+  </div>
+</body>
+</html>

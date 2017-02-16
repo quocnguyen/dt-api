@@ -1,0 +1,56 @@
+<!DOCTYPE html lang="en">
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/css/pure-min.css">
+  <!--[if lte IE 8]>
+    <link rel="stylesheet" href="/css/grids-responsive-old-ie-min.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+    <link rel="stylesheet" href="/css/grids-responsive-min.css">
+  <!--<![endif]-->
+  <link rel="stylesheet" type="text/css" href="/css/style.css">
+  <title>Get link drive không bao giờ die</title>
+</head>
+<body>
+  <div class="wrapper">
+    <div class="container">
+      <div class="pure-g">
+        <section class="pure-u-sm-1-1">
+          <h3>
+            Workers /
+            <a href="/workers/create">create new one</a>
+          </h3>
+
+          <table class="pure-table">
+            <thead>
+              <tr>
+                <td>Name</td>
+                <td>URL</td>
+                <td>Score</td>
+                <td>Created</td>
+                <td></td>
+              </tr>
+            </thead>
+
+            <tbody>
+              <tr>
+                {{#workers}}
+                <td>{{name}}</td>
+                <td>{{url}}</td>
+                <td>{{score}}</td>
+                <td>{{created}}</td>
+                <td>
+                  <a href="/workers/{{id}}/remove">Remove</a>
+                </td>
+                {{/workers}}
+              </tr>
+            </tbody>
+          </table>
+
+        </section>
+      </div>
+    </div>
+  </div>
+  </body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html lang="en">
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/css/pure-min.css">
+  <!--[if lte IE 8]>
+    <link rel="stylesheet" href="/css/grids-responsive-old-ie-min.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+    <link rel="stylesheet" href="/css/grids-responsive-min.css">
+  <!--<![endif]-->
+  <link rel="stylesheet" type="text/css" href="/css/style.css">
+  <title>Get link drive không bao giờ die</title>
+</head>
+<body>
+
+  <div class="wrapper">
+    <div class="container">
+      <section class="pure-g">
+
+        <div class="pure-u-sm-1-1">
+          <h1 class="slogan">Get link drive không bao <i>vờ</i> die</h1>
+          <div class="pure-u-sm-1-1">
+            <div class="pure-menu pure-menu-horizontal">
+             <!--  <ul class="pure-menu-list">
+                <li class="pure-menu-item">
+                  <a class="pure-menu-link" href="/register">Đăng ký</a>
+                </li>
+                <li class="pure-menu-item">
+                  <a class="pure-menu-link" href="/contact">Liên hệ</a>
+                </li>
+              </ul> -->
+            </div>
+          </div>
+        </div>
+
+
+        <div class="pure-u-md-2-5 pure-u-sm-1-1">
+          {{^result}}
+          <!-- thi chu co link khong -->
+          <img src="//i.imgur.com/NP4giK1.jpg" class="pure-img">
+          {{/result}}
+
+          {{#result}}
+          <!-- ban tang co link roi -->
+          <img src="//i.imgur.com/xci39mH.jpg" class="pure-img">
+          {{/result}}
+        </div>
+        <div class="pure-u-md-3-5 pure-u-sm-1-1">
+          <form class="pure-form" method="post" action="/">
+            <fieldset>
+              {{#csrfToken}}
+              <input class="pure-input-1" type="hidden" name="_csrf" value="{{csrfToken}}">
+              {{/csrfToken}}
+              <label>Link Google Drive (Public)</label>
+              <input class="pure-input-1" type="url" name="drive" placeholder="Nhập Link Google Drive" required value="https://drive.google.com/open?id=0B7MB8rvfJ1jCS2p0Ty1MZUtzdkk">
+              <p class="help">
+                Code mới cập nhật Thứ 3 ngày 7 tháng 2 năm 2017
+              </p>
+              <!-- <label>Site của bạn (có thể để trống)</label>
+              <input class="pure-input-1" type="url" name="domain" placeholder="Nhập website, vd: http://whatever.com">
+              <p class="help">Nếu có website, link get ra sẽ chỉ chạy trên website của bạn</p> -->
+              <button class="pure-button pure-input-1 pure-button-primary" type="submit">
+                Tạo link
+              </button>
+            </fieldset>
+          </form>
+      </section>
+
+      {{#result}}
+      <section>
+<pre>{{.}}</pre>
+      </section>
+      {{/result}}
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,4 @@
+duongtang_api:
+  image: quocnguyen/duongtang-api
+  mem_limit: 1024m
+  env_file: .env

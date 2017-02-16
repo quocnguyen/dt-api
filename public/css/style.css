@@ -1,0 +1,56 @@
+.container {
+  max-width: 960px;
+}
+.wrapper {
+  max-width: 960px;
+  margin: 0 auto;
+}
+html, button, input, select, textarea,
+.pure-g [class *= "pure-u"] {
+    font-family: monospace;
+    font-size: 20px;
+}
+
+.green {
+  color: #88B04B;
+}
+
+.help {
+  color: #ccc;
+  font-size: 16px;
+}
+
+pre {
+  display: block;
+  padding: 9.5px;
+  margin: 0 0 10px;
+  font-size: 13px;
+  line-height: 1.42857143;
+  color: #333;
+  word-break: break-all;
+  word-wrap: break-word;
+  background-color: #f5f5f5;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.slogan {
+  text-align: center;
+  color: #88B04B;
+  margin-bottom: 10px;
+}
+
+.pure-menu {
+  text-align: center;
+  height: 100px;
+}
+
+.main {
+  margin-top: 100px;
+  text-align: justify;
+}
+
+.apikey {
+  text-align: center;
+  color: #88B04B;
+}

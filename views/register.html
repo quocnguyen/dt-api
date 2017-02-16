@@ -1,0 +1,60 @@
+<!DOCTYPE html lang="en">
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/css/pure-min.css">
+  <!--[if lte IE 8]>
+    <link rel="stylesheet" href="/css/grids-responsive-old-ie-min.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+    <link rel="stylesheet" href="/css/grids-responsive-min.css">
+  <!--<![endif]-->
+  <link rel="stylesheet" type="text/css" href="/css/style.css">
+  <title>Get link drive không bao giờ bay</title>
+</head>
+<body>
+  <div class="wrapper">
+    <div class="container">
+
+      <section class="pure-g">
+        <div class="pure-u-sm-1-1">
+          <h1>Đã đủ người đăng ký</h1>
+          <p>Thí chủ hãy chờ đợt sau hoặc dùng code VIP</p>
+        </div>
+      </section>
+
+      <div class="pure-u-md-3-5 pure-u-sm-1-1">
+        <form class="pure-form" action="/" method="POST">
+          <fieldset>
+            {{#csrfToken}}
+            <input class="pure-input-1" type="hidden" name="_csrf" value="{{csrfToken}}">
+            {{/csrfToken}}
+            <label>Code VIP</label>
+            <input class="pure-input-1" type="text" name="code" placeholder="Code VIP" required value="">
+            <p class="help">
+              Code mát xa tại tây lương nữ quốc. Thó của admin.
+              <a href="/">Thó ngay</a>
+            </p>
+
+            <label>Web của thí chủ</label>
+            <input class="pure-input-1" type="url" name="code" placeholder="Vd: http://phim.clgt.vn" required value="">
+            <p class="help">Không có web thí chủ đăng ký làm gì?</p>
+
+            <label>Email của thí chủ</label>
+            <input class="pure-input-1" type="email" name="email" placeholder="Vd: ngokhong@clgt.vn" required value="">
+            <p class="help">Để bần tăng gởi apikey vào mail</p>
+
+            <label>Password của thí chủ</label>
+            <input class="pure-input-1" type="password" name="password" placeholder="Chưa code vụ quên pass, thí chủ hãy cẩn thận !" required value="">
+            <p class="help">Dùng login vào web thống kê của bần tăng</p>
+
+            <button class="pure-button pure-input-1 pure-button-primary" type="submit">
+              Đăng Ký
+            </button>
+          </fieldset>
+        </form>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
